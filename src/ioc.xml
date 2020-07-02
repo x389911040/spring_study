@@ -26,7 +26,7 @@
         <property name="a" ref="a"></property>
     </bean>
 
-    <bean class="com.xue.bean.MyBeanFactory"></bean>
+    <bean class="com.xue.bean.MyBeanFactoryProcessor"></bean>
 
     <bean class="com.xue.bean.MyBeanProcessor"></bean>
 

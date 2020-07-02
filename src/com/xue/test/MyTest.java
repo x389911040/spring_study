@@ -1,7 +1,9 @@
 package com.xue.test;
 
+import com.xue.annotation.UserService;
 import com.xue.bean.MyEvent;
 import com.xue.bean.MyPublisher;
+import com.xue.bean.Person;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -23,10 +25,10 @@ public class MyTest {
         ApplicationContext context = new ClassPathXmlApplicationContext("ioc.xml");
 
         //获取具体的bean实例对象，需要进行强制类型转换
-//        Person person = (Person) context.getBean("person");
+//        UserService userService = (UserService) context.getBean("userService");
         // 获取对象的时候不需要强制类型转换
-//        Person person = context.getBean("person", Person.class);
-//        System.out.println(person);
+//        UserService userService = context.getBean("userService", UserService.class);
+//        System.out.println(userService);
         MyPublisher myPublisher = (MyPublisher)context.getBean("myPublisher");
 
         AtomicInteger loop = new AtomicInteger(1);

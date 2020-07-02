@@ -12,9 +12,8 @@ import java.util.Iterator;
  * @description 我的Bean工厂后处理
  * @create 2020-07-01 15:31
  **/
-public class MyBeanFactory implements BeanFactoryPostProcessor {
+public class MyBeanFactoryProcessor implements BeanFactoryPostProcessor {
 
-    @Bean
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         Iterator<String> beanNamesIterator = beanFactory.getBeanNamesIterator();
 
